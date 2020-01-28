@@ -1,5 +1,13 @@
 int BUTTON = 4;
+ //int BLUE [2] = {11, 13};
+int BLUE = 11;
+int BLUE2 = 13;
 
+int RED = 9;
+int RED2 = 8;
+
+int WHITE = 12;
+int WHITE2 = 10;
 void setup() {
   // put your setup code here, to run once:
 pinMode(BUTTON,INPUT);
@@ -16,20 +24,39 @@ void loop() {
   // put your main code here, to run repeatedly:
   if(digitalRead(BUTTON) == HIGH) //on button down = light on
    {
-    digitalWrite(12, HIGH);
-    digitalWrite(13, HIGH);
-    digitalWrite(11, HIGH);
-    digitalWrite(10, HIGH);
-    digitalWrite(9, HIGH);
-    digitalWrite(8, HIGH);
+  //for(int i = 0; i << sizeof(BLUE); i++ )
+ //{
+ //digitalWrite(BLUE[i], HIGH);
+ //}
+    digitalWrite(BLUE, HIGH);
+    digitalWrite(BLUE2, HIGH);
+    delay(1500);
+    digitalWrite(BLUE, LOW);
+    digitalWrite(BLUE2, LOW);
+    delay(1500);
+   
+    digitalWrite(RED, HIGH);
+    digitalWrite(RED2, HIGH);
+    delay(1500);
+    digitalWrite(RED, LOW);
+    digitalWrite(RED2, LOW);
+    delay(1500);
+  
+    digitalWrite(WHITE, HIGH);
+    digitalWrite(WHITE2, HIGH);
+    delay(1500);
+    digitalWrite(WHITE, LOW);
+    digitalWrite(WHITE2, LOW);
+    delay(1500);
+
    }
-  else //on button release = light off
-   {
-     digitalWrite(12, LOW);
-    digitalWrite(13, LOW);
-    digitalWrite(11, LOW);
-    digitalWrite(10, LOW);
-    digitalWrite(9, LOW);
-    digitalWrite(8, LOW);
-   }
+ // else //on button release = light off
+ //  {  
+ //   digitalWrite(BLUE, LOW);
+ //   digitalWrite(13, LOW);
+ //   digitalWrite(12, LOW);
+ //   digitalWrite(10, LOW);
+  //  digitalWrite(9, LOW);
+  //  digitalWrite(8, LOW);
+ //  }
 }
